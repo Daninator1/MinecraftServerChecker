@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinecraftServerChecker.Console", "MinecraftServerChecker.Console\MinecraftServerChecker.Console.csproj", "{68AD7712-B97F-4BD3-9593-1B7D0FFE404F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinecraftClient", "MCC\MinecraftClient\MinecraftClient.csproj", "{FC9D217B-4077-4A14-A3BE-08EFC27F8197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInteractive", "MCC\ConsoleInteractive\ConsoleInteractive\ConsoleInteractive\ConsoleInteractive.csproj", "{6EC86937-01CD-4D97-AC39-C0F35C464138}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68AD7712-B97F-4BD3-9593-1B7D0FFE404F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AD7712-B97F-4BD3-9593-1B7D0FFE404F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AD7712-B97F-4BD3-9593-1B7D0FFE404F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AD7712-B97F-4BD3-9593-1B7D0FFE404F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9D217B-4077-4A14-A3BE-08EFC27F8197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9D217B-4077-4A14-A3BE-08EFC27F8197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9D217B-4077-4A14-A3BE-08EFC27F8197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9D217B-4077-4A14-A3BE-08EFC27F8197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC86937-01CD-4D97-AC39-C0F35C464138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC86937-01CD-4D97-AC39-C0F35C464138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC86937-01CD-4D97-AC39-C0F35C464138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC86937-01CD-4D97-AC39-C0F35C464138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

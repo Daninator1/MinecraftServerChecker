@@ -1,0 +1,3 @@
+[submodule "MCC"]
+	path = MCC
+	url = https://github.com/Daninator1/Minecraft-Console-Client.git
