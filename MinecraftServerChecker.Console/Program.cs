@@ -1,10 +1,5 @@
-﻿using System.Reactive.Linq;
-using Microsoft.Extensions.Configuration;
-using MinecraftClient;
-using MinecraftClient.Protocol;
-using MinecraftClient.Protocol.Handlers.Forge;
-using MinecraftClient.Protocol.ProfileKey;
-using MinecraftServerChecker.Console;
+﻿using Microsoft.Extensions.Configuration;
+using MinecraftServerChecker;
 
 var configuration = new ConfigurationBuilder()
     .AddUserSecrets<Program>()
@@ -12,25 +7,33 @@ var configuration = new ConfigurationBuilder()
 
 var login = configuration.GetSection("UserLogin").Get<UserLogin>()!;
 
-var result = ProtocolHandler.GetLogin(
-    login.Email,
-    login.Password,
-    Settings.MainConfigHealper.MainConfig.GeneralConfig.LoginType.microsoft,
-    out var session);
+var checker = new ServerChecker(login);
+var loginResult = checker.Login();
 
-var playerKeyPair = KeyUtils.GetNewProfileKeys(session.ID);
+if (!loginResult)
+{
+    Console.WriteLine("Login failed");
+    return;
+}
 
-var serverIp = args[0];
-var serverPort = ushort.Parse(args[1]);
-var protocolVersion = 0;
-ForgeInfo? forgeInfo = null;
+var checkResult = await checker.CheckServerAsync(new Server
+{
+    Ip = args[0],
+    Port = ushort.Parse(args[1]),
+});
 
-ProtocolHandler.GetServerInfo(serverIp, serverPort, ref protocolVersion, ref forgeInfo);
+checkResult.Switch(
+    success =>
+    {
+        Console.WriteLine("Success");
+        Console.WriteLine("Online mode: " + success.IsOnlineMode);
+        Console.WriteLine("Online players: " + string.Join(", ", success.OnlinePlayers));
+    },
+    failure =>
+    {
+        Console.WriteLine("Failure");
+        Console.WriteLine("Failure reason: " + failure.Reason);
+        Console.WriteLine("Failure message: " + failure.Message);
+    });
 
-var joinObservable = CustomMcClient.JoinResultSubject.FirstAsync().Timeout(TimeSpan.FromSeconds(10));
-var client = new CustomMcClient(session, playerKeyPair, serverIp, serverPort, protocolVersion, forgeInfo);
-// CustomMcClient.JoinResultSubject.Subscribe(x => Console.WriteLine(x));
-var joinResult = await joinObservable;
-Console.WriteLine(joinResult);
-Console.ReadKey();
 Console.ReadKey();

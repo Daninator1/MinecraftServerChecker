@@ -1,4 +1,4 @@
-﻿namespace MinecraftServerChecker.Console;
+﻿namespace MinecraftServerChecker;
 
 public class UserLogin
 {
