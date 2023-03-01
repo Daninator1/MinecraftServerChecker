@@ -5,24 +5,7 @@
     <projectFile>MinecraftServerChecker.Console/MinecraftServerChecker.Console.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf2cab7d-c6f8-4f6d-a5dd-6eeb18187468" name="Changes" comment="adaptations">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MinecraftServerChecker/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MinecraftServerChecker/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MinecraftServerChecker/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MinecraftServerChecker/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MinecraftServerChecker/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MCC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MinecraftServerChecker.Console/CustomMcClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MinecraftServerChecker.Console/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MinecraftServerChecker.Console/MinecraftServerChecker.Console.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MinecraftServerChecker.Console/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MinecraftServerChecker.Console/UserLogin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MinecraftServerChecker.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCC/MinecraftClient/McClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MCC/MinecraftClient/McClient.cs" afterDir="false" />
-    </list>
+    <list default="true" id="cf2cab7d-c6f8-4f6d-a5dd-6eeb18187468" name="Changes" comment="initial testing setup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,8 +28,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b42861e221c0fde5c45f857f38f4a9e2a5fa8a7f9ed9453a15c1f5509eb69d/Observable.Aggregates.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c3b2a4cdcf127e28515dc4657830cb28309c97b930e7b89a3f664eda6c5172/Thread.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MCC/DebugTools/MinecraftClientProxy/Compression/Deflate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MCC/DebugTools/MinecraftClientProxy/Compression/GZipStream.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MCC/DebugTools/MinecraftClientProxy/Compression/Inflate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danin/RiderProjects/MinecraftServerChecker/MCC/MinecraftClient/ChatBots/AutoCraft.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MCC/MinecraftClient/ChatBots/AutoCraft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danin/RiderProjects/MinecraftServerChecker/MCC/MinecraftClient/McClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danin/RiderProjects/MinecraftServerChecker/MCC/MinecraftClient/McClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danin/RiderProjects/MinecraftServerChecker/MCC/MinecraftClient/Protocol/ProfileKey/KeyUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MCC/MinecraftClient/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -130,7 +117,7 @@
       <updated>1677611448290</updated>
       <workItem from="1677611448600" duration="756000" />
       <workItem from="1677612232128" duration="4234000" />
-      <workItem from="1677671815020" duration="5967000" />
+      <workItem from="1677671815020" duration="6391000" />
     </task>
     <task id="LOCAL-00001" summary="adaptations">
       <created>1677671856439</created>
@@ -139,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677671856439</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="make join/disconnect methods virtual in McClient">
+      <created>1677681116823</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677681116823</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial testing setup">
+      <created>1677681430258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677681430258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +174,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="adaptations" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaptations" />
+    <MESSAGE value="make join/disconnect methods virtual in McClient" />
+    <MESSAGE value="initial testing setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial testing setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -183,10 +186,10 @@
           <line>35</line>
           <properties documentPath="C:\Users\danin\RiderProjects\MinecraftServerChecker\MinecraftServerChecker.Console\Program.cs" initialLine="25" containingFunctionPresentation="">
             <startOffsets>
-              <option value="1229" />
+              <option value="1235" />
             </startOffsets>
             <endOffsets>
-              <option value="1247" />
+              <option value="1253" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
