@@ -4,6 +4,7 @@ using MinecraftClient.Protocol.Handlers.Forge;
 using MinecraftClient.Protocol.ProfileKey;
 using MinecraftClient.Protocol.Session;
 using MinecraftClient.Scripting;
+using MinecraftServerChecker.Models;
 using OneOf;
 
 namespace MinecraftServerChecker;

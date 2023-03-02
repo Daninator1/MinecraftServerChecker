@@ -1,5 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MinecraftServerChecker;
+using MinecraftServerChecker.Models;
+using MinecraftServerChecker.ServerFinders;
+
+var finder = new NitradoServerFinder();
+
+await foreach (var server in finder.FindServersAsync())
+{
+    
+}
 
 var configuration = new ConfigurationBuilder()
     .AddUserSecrets<Program>()

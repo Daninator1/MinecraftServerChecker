@@ -1,4 +1,4 @@
-﻿namespace MinecraftServerChecker;
+﻿namespace MinecraftServerChecker.Models;
 
 public record CheckSuccess
 {

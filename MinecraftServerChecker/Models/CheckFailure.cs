@@ -1,6 +1,6 @@
 ﻿using MinecraftClient.Scripting;
 
-namespace MinecraftServerChecker;
+namespace MinecraftServerChecker.Models;
 
 public record CheckFailure
 {
